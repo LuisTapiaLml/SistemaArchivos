@@ -11,11 +11,11 @@ def getPath ( path = str , accion = str ) :
     
     if path[-1] == '' :  del path[-1]
 
-    if path[0] == 'root' and len (path ) > 1 : 
+    # if path[0] == 'root' and len (path ) > 1 : 
         
-        del path[0]
+    #     del path[0]
 
-        return path 
+    #     return path 
 
     PATHACTUAL =  _GLOBALDATA['__path'].split("/")
 

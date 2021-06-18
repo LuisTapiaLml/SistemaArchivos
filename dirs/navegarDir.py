@@ -31,8 +31,6 @@ def navegarDir ( path ) :
 
             _FILESYSTEM =  respuesta['data']
 
-
-    
     _GLOBALDATA['__path'] = "/".join( path ) 
 
     saveGlobalData( _GLOBALDATA )

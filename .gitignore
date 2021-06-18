@@ -1,1 +1,5 @@
 **/__pycache__
+
+data/config.json
+data/fileSystem.json
+
