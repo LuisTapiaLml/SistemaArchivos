@@ -1,3 +1,4 @@
+from dirs.eliminarDir import eliminarDir
 from dirs.navegarDir import navegarDir
 from dirs.crearDir import crearDir
 
@@ -13,6 +14,10 @@ def comandosDir(comando):
     if modificador == 'go' : 
         
         navegarDir( comando[2] )
+
+    if modificador == 'eliminar' : 
+        
+        eliminarDir( comando[2] )
     
         
 

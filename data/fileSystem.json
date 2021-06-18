@@ -1,1 +1,40 @@
-[]
+[
+    {
+        "nombre": "carpeta",
+        "tipo": "carpeta",
+        "hijos": [
+            {
+                "nombre": "carpeta2",
+                "tipo": "carpeta",
+                "hijos": []
+            },
+            {
+                "nombre": "carpeta3",
+                "tipo": "carpeta",
+                "hijos": [
+                    {
+                        "nombre": "carpeta4",
+                        "tipo": "carpeta",
+                        "hijos": []
+                    },
+                    {
+                        "nombre": "prueba",
+                        "tipo": "carpeta",
+                        "hijos": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nombre": "nuevaCarpeta",
+        "tipo": "carpeta",
+        "hijos": [
+            {
+                "nombre": "prueba2",
+                "tipo": "carpeta",
+                "hijos": []
+            }
+        ]
+    }
+]
