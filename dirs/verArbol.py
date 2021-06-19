@@ -9,9 +9,8 @@ from helpers.getFileSystem import getFileSystem
 def verArbol() :
     
     _FYLESYSTEM = getFileSystem()
-    _GLOBALDATA = getGlobalData()
 
-    path =  getPath( _GLOBALDATA['__path'] , "tree" )
+    path =  getPath( "" , "actual" )
 
     arbol = ''
 

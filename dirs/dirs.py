@@ -1,3 +1,5 @@
+from dirs.moverDir import moverDir
+from dirs.copiarDir import copiarDir
 from dirs.renombrarDir import renombrarDir
 from dirs.verContenido import verContenido
 from dirs.eliminarDir import eliminarDir
@@ -24,6 +26,15 @@ def comandosDir(comando):
     if modificador == 'renom':
 
         renombrarDir( comando[2:] )
+
+    if modificador ==  'copiar':
+
+        copiarDir( comando[2:] ) 
+
+    if modificador ==  'mover':
+
+        moverDir( comando[2:] ) 
+        
 
     if modificador == 'ver' :
         

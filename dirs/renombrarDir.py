@@ -10,7 +10,7 @@ def renombrarDir (comando) :
 
     _FILESYSTEM = getFileSystem()
 
-    path_actual =  _GLOBALDATA['__path'].split("/")
+    path_actual =  getPath('','actual')
 
     arbol = _FILESYSTEM
 

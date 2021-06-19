@@ -11,10 +11,10 @@ def verContenido() :
     _FYLESYSTEM = getFileSystem()
     _GLOBALDATA = getGlobalData()
 
-    path =  getPath( _GLOBALDATA['__path'] )
+    path =  getPath('','actual')
 
     arbol = ''
-
+    
     for dir in path :
         
         if dir in _FYLESYSTEM :
