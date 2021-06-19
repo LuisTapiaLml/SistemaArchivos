@@ -1,3 +1,4 @@
+import json
 from helpers.getPath import getPath
 from helpers.saveFileSystem import saveFileSystem
 from helpers.getFileSystem import getFileSystem
@@ -13,59 +14,38 @@ def  crearDir( path ):
         print(f"La ruta de subdirectorio o el archivo {path} no es valido ") 
         
         return False
+        
 
     arbol = _FILESYSTEM
-    
-    temp_arbol = {}
 
-    contador = 0
+    exite = True
 
     for index ,  dir in enumerate( path ) :
 
-        temp_arbol =  filtrarArbol( dir , arbol )
+        if dir in arbol :
 
-        if len( temp_arbol ) :
+            arbol = arbol[dir]
 
-            contador += 1
+            if index == len( path ) -1 :                 
+                exite = False
 
-            arbol = temp_arbol[0]['hijos']
+        else :
 
-            continue
+            arbol[dir] =  {}
+
+            arbol = arbol[dir]
             
-        else:
-
-            arbol.append({
-                "nombre" : dir,
-                "tipo" : "carpeta" , 
-                "hijos" : []
-            })
-
-            arbol = arbol[-1]["hijos"]
 
 
-    if( contador == len( path )  ) :
+    if not exite :
 
         path = "/".join(path)
         
-        print(f"Ya existe el subdirectorio o el archivo {path}")            
+        print(f"Ya existe el subdirectorio o el archivo '{path}'")            
 
     saveFileSystem( _FILESYSTEM )
      
 
-
-def filtrarArbol( dir , arbol ) :
-
-    encontrado =  []    
-
-    for carpeta in arbol : 
-
-        if carpeta["nombre"] ==  dir :
-            
-            encontrado.append(carpeta)
-                
-    return encontrado
-
-                
 
 
 

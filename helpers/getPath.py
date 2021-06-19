@@ -7,10 +7,19 @@ def getPath ( path = str , accion = str ) :
     
     path = path.split("/")
 
-    if path[-1] == '' and len(path) > 1 :  del path[-1] 
+    if path[-1] == '' and len(path) > 1 :  
 
-    if path[0] == '.' or path[0] == '' or path[0] == 'root' :  del path[0]
+        del path[-1] 
+
+    if  path[0] == "root:" :
+        
+        _GLOBALDATA['__path'] = ""
+ 
+    if path[0] == '.' or path[0] == '' or path[0] == 'root:' :  del path[0]
     
+    if accion == "renomDir" : return path
+
+    if accion == "tree" : return _GLOBALDATA['__path'].split("/")
 
     if len ( path ) == 0 :
         
@@ -37,7 +46,11 @@ def getPath ( path = str , accion = str ) :
 
             del path[index]
 
-    path = PATHACTUAL + path
+        path = PATHACTUAL + path
+    
+    else :
+
+        path = PATHACTUAL + path
 
     return path
         

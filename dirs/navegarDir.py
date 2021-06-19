@@ -15,21 +15,20 @@ def navegarDir ( path ) :
 
     path = getPath( path , 'navegarDir' )
 
-    temp_path  = path[:]
+    for index ,  dir in enumerate( path ) :
 
-    for dir in temp_path : 
+        if dir in _FILESYSTEM :
 
-        respuesta = buscarCarpeta (dir , _FILESYSTEM) 
+            _FILESYSTEM = _FILESYSTEM[dir]
 
-        if not respuesta['estado'] : 
+            _FILESYSTEM
+
+        else:
             
             print(f"La ruta de subdirectorio o el archivo {path} no es valido ") 
-
+            
             return False
-        
-        else:
 
-            _FILESYSTEM =  respuesta['data']
 
     _GLOBALDATA['__path'] = "/".join( path ) 
 
@@ -38,25 +37,6 @@ def navegarDir ( path ) :
     return True
 
         
-
-def buscarCarpeta (dir , _FILESYSTEM) :
-
-    respuesta = {
-        'estado' : False ,
-        'data' : []
-    }
-
-    for carpeta in _FILESYSTEM :
-
-        if ( carpeta['nombre'] ==  dir ) :
-            
-            respuesta = {
-                'estado' : True ,
-                'data' : carpeta['hijos']
-            }
-        
-
-    return respuesta
     
         
     

@@ -1,40 +1,45 @@
-[
-    {
-        "nombre": "carpeta",
-        "tipo": "carpeta",
-        "hijos": [
-            {
-                "nombre": "carpeta2",
-                "tipo": "carpeta",
-                "hijos": []
-            },
-            {
-                "nombre": "carpeta3",
-                "tipo": "carpeta",
-                "hijos": [
-                    {
-                        "nombre": "carpeta4",
-                        "tipo": "carpeta",
-                        "hijos": []
-                    },
-                    {
-                        "nombre": "prueba",
-                        "tipo": "carpeta",
-                        "hijos": []
+{
+    "carpeta2": {
+        "capertanueva": {
+            "nuevoNombre": {
+                "carpeta6": {}
+            }
+        },
+        "carpetaNueva2": {
+            "carpeta5": {
+                "carpeta10": {
+                    "carpeta15": {
+                        "carpeta12": {
+                            "carpetaaa": {
+                                "NuevaCarpeta": {}
+                            }
+                        }
                     }
-                ]
+                }
             }
-        ]
+        },
+        "root": {}
     },
-    {
-        "nombre": "nuevaCarpeta",
-        "tipo": "carpeta",
-        "hijos": [
-            {
-                "nombre": "prueba2",
-                "tipo": "carpeta",
-                "hijos": []
-            }
-        ]
+    "carpeta3": {},
+    "carpeta4": {},
+    "carpeta5": {
+        "carpeta2": {
+            "carpeta1": {}
+        }
+    },
+    "carpetaNueva": {
+        "carpeta5": {
+            "carpeta6": {}
+        }
+    },
+    "carpetaNueva2": {
+        "carpeta5": {
+            "carpeta6": {}
+        }
+    },
+    "carpetaNueva3": {
+        "carpeta5": {
+            "carpeta6": {}
+        }
     }
-]
+}

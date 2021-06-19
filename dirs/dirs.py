@@ -1,3 +1,5 @@
+from dirs.renombrarDir import renombrarDir
+from dirs.verContenido import verContenido
 from dirs.eliminarDir import eliminarDir
 from dirs.navegarDir import navegarDir
 from dirs.crearDir import crearDir
@@ -11,13 +13,21 @@ def comandosDir(comando):
 
         crearDir(comando[2])
 
-    if modificador == 'go' : 
+    if modificador == 'ir' : 
         
         navegarDir( comando[2] )
 
     if modificador == 'eliminar' : 
         
         eliminarDir( comando[2] )
+
+    if modificador == 'renom':
+
+        renombrarDir( comando[2:] )
+
+    if modificador == 'ver' :
+        
+        verContenido()
     
         
 
