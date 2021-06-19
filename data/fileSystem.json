@@ -1,1 +1,57 @@
-{"carpeta2": {"capertanueva": {"nuevoNombre": {"carpeta6": {}}}, "carpetaNueva2": {"carpeta5": {"carpeta10": {"carpeta15": {"carpeta12": {"carpetaaa": {"NuevaCarpeta": {}}}}}}}, "root": {}}, "carpeta3": {"carpeta2": {}}, "carpeta4": {"carpeta5": {"carpeta2": {"carpeta1": {}}}}, "carpeta5": {"carpeta2": {"carpeta1": {}}}, "carpetaNueva": {"carpeta5": {"carpeta6": {}}}, "carpetaNueva2": {"carpeta5": {"carpeta6": {}}}, "carpetaNueva3": {"carpeta5": {"carpeta6": {}}}, "carpeta100": {"carpeta2": {}, "carpeta1": {}}}
+{
+    "carpeta2": {
+        "capertanueva": {
+            "nuevoNombre": {
+                "carpeta6": {}
+            }
+        },
+        "carpetaNueva2": {
+            "carpeta5": {
+                "carpeta10": {
+                    "carpeta15": {
+                        "carpeta12": {
+                            "carpetaaa": {
+                                "NuevaCarpeta": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "root": {}
+    },
+    "carpeta3": {
+        "carpeta2": {}
+    },
+    "carpeta4": {
+        "carpeta5": {
+            "carpeta2": {
+                "carpeta1": {}
+            }
+        }
+    },
+    "carpeta5": {
+        "carpeta2": {
+            "carpeta1": {}
+        }
+    },
+    "carpetaNueva": {
+        "carpeta5": {
+            "carpeta6": {}
+        }
+    },
+    "carpetaNueva2": {
+        "carpeta5": {
+            "carpeta6": {}
+        }
+    },
+    "carpetaNueva3": {
+        "carpeta5": {
+            "carpeta6": {}
+        }
+    },
+    "carpeta100": {
+        "carpeta2": {},
+        "carpeta1": {}
+    }
+}
