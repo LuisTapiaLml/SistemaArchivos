@@ -48,9 +48,9 @@ def eliminarDir ( path , accion = '' ) :
         
             return False
 
-    if accion == '' :
+    # if accion == '' :
 
-        print("Ruta eliminada con éxito.")
+    #     print("Ruta eliminada con éxito.")
 
     saveFileSystem( _FILESYSTEM )
 

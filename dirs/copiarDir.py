@@ -58,7 +58,7 @@ def copiarDir(comando):
                 
                 return False 
 
-    print("Ruta copiada con éxito.")
+    # print("Ruta copiada con éxito.")
 
     saveFileSystem(_FILESYSTEM)
 

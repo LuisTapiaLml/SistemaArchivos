@@ -51,8 +51,8 @@ def  crearDir( path , nombreArchivo = ''  ):
         print(f"Ya existe el subdirectorio o el archivo '{path}'")            
 
 
-    if nombreArchivo == '' :
-        print("Ruta creada con éxito.")
+    # if nombreArchivo == '' :
+        # print("Ruta creada con éxito.")
 
     saveFileSystem( _FILESYSTEM )
      

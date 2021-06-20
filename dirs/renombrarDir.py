@@ -70,7 +70,7 @@ def renombrarDir (comando) :
 
     saveFileSystem( _FILESYSTEM )
 
-    print("Ruta renombrada con éxito.")
+    # print("Ruta renombrada con éxito.")
 
     return True
 

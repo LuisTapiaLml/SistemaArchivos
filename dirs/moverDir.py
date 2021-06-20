@@ -82,9 +82,7 @@ def moverDir(comando , accion='' ):
     
     else:
         
-        if eliminarDir(comando[0]) :
-
-            print("Ruta movida con éxito.")
+        eliminarDir(comando[0]) 
 
     return True
 
