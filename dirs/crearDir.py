@@ -18,7 +18,7 @@ def  crearDir( path ):
 
     arbol = _FILESYSTEM
 
-    exite = True
+    existe = True
 
     for index ,  dir in enumerate( path ) :
 
@@ -27,7 +27,7 @@ def  crearDir( path ):
             arbol = arbol[dir]
 
             if index == len( path ) -1 :                 
-                exite = False
+                existe = False
 
         else :
 
@@ -36,8 +36,7 @@ def  crearDir( path ):
             arbol = arbol[dir]
             
 
-
-    if not exite :
+    if not existe :
 
         path = "/".join(path)
         

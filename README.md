@@ -30,7 +30,7 @@ La forma basica de los comandos esta compuesta por tres partes, dependido el mod
 <span style="color:#62c699">crear </span>
 <span style="color:#418ad4">root/carpeta1/carpeta2</span>** 
 
-**Ejempplo de rutas aceptadas**
+**Ejemplo de rutas aceptadas**
 
 `./carpeta/carpeta2` <br>
 ` ../carpeta/carpeta2 `</br>

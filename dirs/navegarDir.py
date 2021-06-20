@@ -15,6 +15,8 @@ def navegarDir ( path ) :
 
     path = getPath( path , 'navegarDir' )
 
+    print( path )
+
     for index ,  dir in enumerate( path ) :
 
         if dir in _FILESYSTEM :

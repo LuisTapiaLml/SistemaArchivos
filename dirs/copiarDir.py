@@ -36,22 +36,27 @@ def copiarDir(comando):
             
             return False
 
+    if len ( ruta_copia ) == 0 :
+        
+        nuevo_arbol[ruta_original[-1]] =  carpeta
 
-    for index , dir in enumerate( ruta_copia ):
-       
-        if dir in nuevo_arbol:
+    else:    
 
-            nuevo_arbol = nuevo_arbol[dir]
+        for index , dir in enumerate( ruta_copia ):
+        
+            if dir in nuevo_arbol:
 
-            if index == len( ruta_copia ) - 1 :
+                nuevo_arbol = nuevo_arbol[dir]
 
-                nuevo_arbol[ruta_original[-1]] =  carpeta
+                if index == len( ruta_copia ) - 1 :
 
-        else:
-            
-            print("La carpeta que quiere copiar no existe")
-            
-            return False 
+                    nuevo_arbol[ruta_original[-1]] =  carpeta
+
+            else:
+                
+                print("La carpeta que quiere copiar no existe")
+                
+                return False 
 
 
     saveFileSystem(_FILESYSTEM)
