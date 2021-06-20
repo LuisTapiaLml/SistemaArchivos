@@ -7,7 +7,7 @@ from helpers.getFileSystem import getFileSystem
 from helpers.getPath import getPath
 
 
-def eliminarDir ( path ) :
+def eliminarDir ( path , accion = '' ) :
     
     _FILESYSTEM = getFileSystem()
     
@@ -26,6 +26,12 @@ def eliminarDir ( path ) :
 
     for index ,  dir in enumerate( path ) :
 
+        if  index == len( path ) -1  and accion == "archivo" :
+                
+                if not ".txt" in dir :
+
+                    dir += ".txt"
+
         if dir in arbol :
 
             if index == len( path ) -1 :      
@@ -38,9 +44,13 @@ def eliminarDir ( path ) :
             
         else :
 
-            print("El directorio que intenta eliminar no existe.",path)
+            print("El directorio que intenta eliminar no existe.",dir)
         
             return False
+
+    if accion == '' :
+
+        print("Ruta eliminada con éxito.")
 
     saveFileSystem( _FILESYSTEM )
 

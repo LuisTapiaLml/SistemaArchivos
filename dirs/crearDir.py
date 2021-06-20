@@ -3,7 +3,7 @@ from helpers.getPath import getPath
 from helpers.saveFileSystem import saveFileSystem
 from helpers.getFileSystem import getFileSystem
 
-def  crearDir( path ):
+def  crearDir( path , nombreArchivo = ''  ):
     
     _FILESYSTEM = getFileSystem()
     
@@ -31,6 +31,14 @@ def  crearDir( path ):
 
         else :
 
+            if index == len( path ) -1 and not nombreArchivo == '' :
+                
+                arbol[dir] = nombreArchivo
+
+                # arbol = arbol[dir]
+
+                break
+
             arbol[dir] =  {}
 
             arbol = arbol[dir]
@@ -42,9 +50,13 @@ def  crearDir( path ):
         
         print(f"Ya existe el subdirectorio o el archivo '{path}'")            
 
+
+    if nombreArchivo == '' :
+        print("Ruta creada con éxito.")
+
     saveFileSystem( _FILESYSTEM )
      
-
+    return True
 
 
 

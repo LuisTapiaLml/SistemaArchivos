@@ -22,8 +22,6 @@ def verArbol() :
 
         else:
 
-            print(path)
-
             print("Hubo un error al procesar el comando")
 
             return False   
@@ -48,11 +46,24 @@ def formatoArbol(directorio,s):
     linea = ""
 
     if not isinstance(directorio,dict) and not isinstance(directorio,list):
+
         if s > 0 : linea = "└"
-        print("   "*s+linea+"-"*s+str(directorio) )
+        
+
+        if not isinstance(directorio,str) : 
+
+            print("   "*s+linea+"-"*s+str(directorio) )
+
     else:
+
         for key in directorio:
+
             if s > 0 : linea = "└"
-            print("   "*s+linea+"-"*s+str( key ) ) 
+
+            # if not isinstance( directorio[key]  , str ) :
+                
+            print("   "*s+linea+"-"*s+str( key ) )
+
             if not isinstance(directorio,list):
+
                 formatoArbol(directorio[key],s+1)

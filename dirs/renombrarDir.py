@@ -6,7 +6,7 @@ from helpers.getPath import getPath
 
 
 def renombrarDir (comando) :
-
+    
     _GLOBALDATA = getGlobalData()
 
     _FILESYSTEM = getFileSystem()
@@ -69,6 +69,8 @@ def renombrarDir (comando) :
 
 
     saveFileSystem( _FILESYSTEM )
+
+    print("Ruta renombrada con éxito.")
 
     return True
 

@@ -8,8 +8,6 @@ from dirs.crearDir import crearDir
 
 
 def comandosDir(comando):
-
-    print(comando)
     
     modificador = comando[1]
 

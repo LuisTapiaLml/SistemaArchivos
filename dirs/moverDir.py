@@ -1,5 +1,8 @@
 
 
+from io import StringIO
+import os
+import uuid
 from dirs.eliminarDir import eliminarDir
 from helpers.saveFileSystem import saveFileSystem
 import json
@@ -7,7 +10,7 @@ from helpers.getPath import getPath
 from helpers.getFileSystem import getFileSystem
 
 
-def moverDir(comando):
+def moverDir(comando , accion='' ):
 
     _FILESYSTEM = getFileSystem() 
     
@@ -19,7 +22,13 @@ def moverDir(comando):
     nuevo_arbol = _FILESYSTEM
     copia= _FILESYSTEM
 
+    ids = {
+        "viejo_id" : '' ,
+        "nuevo_id" : str( uuid.uuid4() )
+    }
+
     carpeta = {}
+ 
 
     for index , dir in enumerate( ruta_original ):    
 
@@ -29,16 +38,23 @@ def moverDir(comando):
 
             if index == len( ruta_original ) - 1 :
                 
-                carpeta = arbol
+                if accion == 'copiarFile':
+
+                    ids["viejo_id"] = arbol
+
+                    carpeta = ids["nuevo_id"]
+                
+                else:    
+
+                    carpeta = arbol
 
                 del arbol
 
         else:
             
-            print("La carpeta que quiere mover no existe")
+            print("La carpeta que quiere mover no existe 1")
             
             return False
-
 
     for index , dir in enumerate( ruta_copia ):
        
@@ -52,19 +68,39 @@ def moverDir(comando):
 
         else:
             
-            print("La carpeta que quiere mover no existe")
+            print("La carpeta que quiere mover no existe 2")
             
             return False 
-
-    
-    # print( json.dumps( _FILESYSTEM , indent=4 ) )
     
     saveFileSystem(_FILESYSTEM)
 
-    eliminarDir(comando[0])
+
+
+    if accion == 'copiarFile':
+
+       copiarArchivo( ids ) 
+    
+    else:
+        
+        if eliminarDir(comando[0]) :
+
+            print("Ruta movida con éxito.")
 
     return True
 
-
-
     
+def copiarArchivo( ids ):
+    
+    carpeta= '../archivos/' 
+    
+    carpeta = os.path.join(os.path.dirname(__file__), carpeta)
+
+    viejo_archivo =  open( carpeta + f"/{ ids['viejo_id'] }" , "r" )
+
+    nuevo_archivo = open( carpeta + f"/{ ids['nuevo_id'] }" , "w" )
+
+    nuevo_archivo.write( viejo_archivo.read() )
+
+    viejo_archivo.close()
+
+    nuevo_archivo.close()

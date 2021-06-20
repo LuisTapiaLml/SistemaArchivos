@@ -23,8 +23,6 @@ def verContenido() :
 
         else:
 
-            print(path)
-
             print("Hubo un error al procesar el comando")
 
             return False   
