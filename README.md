@@ -10,7 +10,7 @@ Se pueden crear carpetas y archivos (unicamente texto plano)
 
 ## Integrantes Del Equipo
 
-+ Díaz Ascos Jesus Gustavo
++ Díaz Arcos Jesus Gustavo
 + Perez Tapia Jose Luis Enrique
 + Trejo Martinez Jorge Joshua
 
