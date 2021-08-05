@@ -71,3 +71,7 @@ La forma basica de los comandos esta compuesta por tres partes, dependido el mod
     | Comando | Descripcion | Ejemplo |
     | ----------- | ----------- | ----------- |
     | tree | muestra el arbol de elementos en el path actual | `tree` |
+    | cache | Ejecuta el script del ejecicio de cache |  |
+    | concurrencia | Ejecuta el script del ejecicio de concurrencia |  |
+    | buffering | Ejecuta el script del ejecicio de buffering |  |
+    | interrupciones | Ejecuta el script del ejecicio de interrupciones |  |
